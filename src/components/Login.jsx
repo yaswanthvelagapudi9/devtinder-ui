@@ -92,7 +92,7 @@ const Login = () => {
             style={{
               position: "absolute",
               bottom: "-4px",
-              left: isLoginForm ? "20%" : "62%",
+              left: isLoginForm ? "15%" : "65%",
               width: "18%",
               height: "3px",
               backgroundColor: activeColor,
@@ -155,9 +155,7 @@ const Login = () => {
             />
           </div>
 
-          {error && (
-            <p className="text-danger small mt-2 text-center">{error}</p>
-          )}
+          {error && <p className="text-danger small mt-2">{error}</p>}
 
           <div className="d-grid mt-4">
             <button
