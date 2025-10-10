@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import { removeFeed } from "../utils/feedSlice";
 
 const UserCard = ({ user }) => {
-  console.log("User", user._id);
   const dispatch = useDispatch();
 
   const handleSendRequest = async (status, userId) => {
@@ -16,7 +15,6 @@ const UserCard = ({ user }) => {
         { withCredentials: true }
       );
       dispatch(removeFeed(userId));
-      console.log(res);
     } catch (err) {
       console.log("Error: " + err.message);
     }
